@@ -1,0 +1,20 @@
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: Max(20px, 6rem);
+    padding-right: Max(20px, 6rem);
+    max-width: 1440px;
+    @include respondMax('mobile3x') {
+        padding: 0 4rem;
+    }
+    @include respondMax('mobile2x') {
+        padding: 0 3rem;
+    }
+    @include respondMax('mobile') {
+        padding: 0 1rem;
+    }
+    @include respondMin('desktop3x') {
+        padding: 0;
+    }
+}

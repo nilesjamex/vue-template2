@@ -1,9 +1,9 @@
 // flexbox
 @mixin flex($justify: flex-start, $align: flex-start, $flow: row wrap) {
-	flex-flow: $flow;
-	display: flex;
-	justify-content: $justify;
-	align-items: $align;
+    flex-flow: $flow;
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
 }
 
 // breakpoints

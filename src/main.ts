@@ -2,6 +2,6 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import "@/scss/index.scss";
+import "../src/styles/_export.scss";
 
 createApp(App).use(store).use(router).mount("#app");

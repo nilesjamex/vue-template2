@@ -1,0 +1,114 @@
+@import "./mixins";
+@import "./variables";
+%cover {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+%container {
+	width: 100vw;
+	margin-inline: auto;
+	padding-left: 19rem;
+	padding-right: 19rem;
+	@include respondMax('tablet') {
+		padding-left: 4rem;
+		padding-right: 4rem;
+	}
+}
+
+%center {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+%flex-ac {
+	display: flex;
+	align-items: center;
+}
+
+%flex-ac-jb {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+%sh-0 {
+    flex-shrink: 0;
+}
+
+%hide {
+	visibility: hidden;
+	opacity: 0;
+}
+
+%show {
+	visibility: visible;
+	opacity: 1;
+}
+
+%link__wrapper {
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	vertical-align: top;
+  }
+  
+  %link__line {
+	background: currentColor;
+	bottom: 0;
+	content: '';
+	height: 1px;
+	left: 0;
+	position: absolute;
+	transition: transform 0.7s $ease-out-expo;
+	width: 100%;
+  }
+  
+  %link__line--visible {
+	transform: scaleX(1);
+	transform-origin: left center;
+  }
+  
+  %link__line--hidden {
+	transform: scaleX(0);
+	transform-origin: right center;
+  }
+  
+  %link {
+	@extend %link__wrapper;
+  
+	display: inline-block;
+  
+	&:after {
+	  @extend %link__line;
+	  @extend %link__line--visible;
+	}
+  
+	&:hover {
+	  &:after {
+		@extend %link__line--hidden;
+	  }
+	}
+  }
+  
+  %link--hidden {
+	@extend %link__wrapper;
+  
+	display: inline-block;
+  
+	&:after {
+	  @extend %link__line;
+	  @extend %link__line--hidden;
+	}
+  
+	&:hover {
+	  &:after {
+		@extend %link__line--visible;
+	  }
+	}
+  }
+  
